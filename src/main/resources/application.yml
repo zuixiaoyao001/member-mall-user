@@ -5,5 +5,16 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
+  redis:
+    host: 192.168.1.104
+    database: 0
+    port: 6379
 server:
   port: 8002
+logging:
+  config: classpath:config/logback.xml
+feign:
+  client:
+    config:
+      user:
+        loggerLevel: full
